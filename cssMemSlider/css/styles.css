@@ -106,6 +106,7 @@ input[type="radio"] {
 .description__wrapper {
     width: 400%;
     display: flex;
+    padding-left: 0.1rem;
 }
 
 .description__item {
