@@ -90,6 +90,20 @@ input[type="radio"] {
     background-color: #ffffff;
 }
 
+#r1~.navigation .bar__1:active .bar__dot,
+#r2~.navigation .bar__2:active .bar__dot,
+#r3~.navigation .bar__3:active .bar__dot,
+#r4~.navigation .bar__4:active .bar__dot {
+    border: 0.15rem #c4c4c4 solid;
+}
+
+#r1:checked~.navigation .bar__1:active .bar__dot,
+#r2:checked~.navigation .bar__2:active .bar__dot,
+#r3:checked~.navigation .bar__3:active .bar__dot,
+#r4:checked~.navigation .bar__4:active .bar__dot {
+    background-color: #c4c4c4;
+}
+
 .bar:hover>.bar__dot {
     border: 0.15rem #ffffff solid;
 }
