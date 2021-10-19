@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>CSSMemSlider</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+
+        <div class="slides">
+            <div class="slides__wrapper">
+                <img class="slide s1" src="./img/meme1.jpg" alt="meme1">
+                <img class="slide" src="./img/meme2.jpg" alt="meme2">
+                <img class="slide" src="./img/meme3.jpg" alt="meme3">
+                <img class="slide" src="./img/meme4.jpg" alt="meme4">
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <label class="bar bar__1" for="r1"><span class="bar__dot"></span></label>
+            <label class="bar bar__2" for="r2"><span class="bar__dot"></span><span></span></label>
+            <label class="bar bar__3" for="r3"><span class="bar__dot"></span></label>
+            <label class="bar bar__4" for="r4"><span class="bar__dot"></span></label>
+        </div>
+
+        <div class="description">
+            <div class="description__wrapper">
+                <p class="description__item description__1">Coding in HTML and CSS</p>
+                <p class="description__item description__2">PHP vs Java vs JavaScript</p>
+                <p class="description__item description__3">Me vs StackOverflow</p>
+                <p class="description__item description__4">My logical thinking</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

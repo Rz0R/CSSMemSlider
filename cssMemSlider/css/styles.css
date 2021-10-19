@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3c3d3d;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+.container {
+    margin: 0.5rem auto;
+    max-width: 38rem;
+    padding: 2rem;
+
+    border-radius: 0.5rem;
+
+    display: grid;
+    grid-template-areas:
+        "slides slides"
+        "descr  nav";
+    grid-template-columns: 5fr 2fr;
+    row-gap: 1rem;
+
+    background-color: #25282A;
+
+}
+
+.slides {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    grid-area: slides;
+}
+
+.slides__wrapper {
+    width: 400%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: margin 0.5s ease;
+}
+
+.navigation {
+    max-width: 100%;
+    grid-area: nav;
+    padding: 0.5rem 0 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation .bar + .bar {
+    margin-left: 0.5rem;
+}
+
+.bar {
+    display: block;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.bar__dot {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+
+    border-radius: 50%;
+    border: 0.15rem #71ABFE solid;
+    transition: all 0.3s ease;
+}
+
+#r1:checked~.navigation .bar__1 .bar__dot,
+#r2:checked~.navigation .bar__2 .bar__dot,
+#r3:checked~.navigation .bar__3 .bar__dot,
+#r4:checked~.navigation .bar__4 .bar__dot {
+    background-color: #71ABFE;
+}
+
+#r1:checked~.navigation .bar__1:hover .bar__dot,
+#r2:checked~.navigation .bar__2:hover .bar__dot,
+#r3:checked~.navigation .bar__3:hover .bar__dot,
+#r4:checked~.navigation .bar__4:hover .bar__dot {
+    background-color: #ffffff;
+}
+
+#r1~.navigation .bar__1:active .bar__dot,
+#r2~.navigation .bar__2:active .bar__dot,
+#r3~.navigation .bar__3:active .bar__dot,
+#r4~.navigation .bar__4:active .bar__dot {
+    border: 0.15rem #c4c4c4 solid;
+}
+
+#r1:checked~.navigation .bar__1:active .bar__dot,
+#r2:checked~.navigation .bar__2:active .bar__dot,
+#r3:checked~.navigation .bar__3:active .bar__dot,
+#r4:checked~.navigation .bar__4:active .bar__dot {
+    background-color: #c4c4c4;
+}
+
+.bar:hover>.bar__dot {
+    border: 0.15rem #ffffff solid;
+}
+
+.description {
+    grid-area: descr;
+    width: 100%;
+    overflow: hidden;
+    color: #ffffff;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.description__wrapper {
+    width: 400%;
+    display: flex;
+    padding-left: 0.1rem;
+}
+
+.description__item {
+    width: 25%;
+    transition: margin 0.1s ease;
+}
+
+
+#r1:checked~.slides .slides__wrapper .s1,
+#r1:checked~.description .description__1 {
+    margin-left: 0;
+}
+
+#r2:checked~.slides .slides__wrapper .s1,
+#r2:checked~.description .description__1 {
+    margin-left: -25%;
+}
+
+#r3:checked~.slides .slides__wrapper .s1,
+#r3:checked~.description .description__1 {
+    margin-left: -50%;
+}
+
+#r4:checked~.slides .slides__wrapper .s1,
+#r4:checked~.description .description__1 {
+    margin-left: -75%;
+}
+
+
+@media (max-width: 48rem) {
+
+    .container {
+        padding: 1rem;
+        grid-template-areas:
+        "slides slides"
+        "nav  nav"
+        "descr descr";
+        row-gap: 0;
+    }
+
+    .navigation {
+        justify-content: center;
+        padding: 0.2rem;
+    }
+
+    .description {
+        padding: 0.2rem 0;
+    }
+
+
+}
